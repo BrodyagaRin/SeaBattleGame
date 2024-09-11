@@ -104,14 +104,14 @@ class Board:
                     self.count += 1
                     self.contour(ship)
                     print("Ship destroyed!")
-                    return True  # Возвращаем True, если попадание
+                    return True  
                 else:
                     print("Ship was hit!")
-                    return True  # Возвращаем True, если попадание
+                    return True
 
-        self.field[d.x][d.y] = "T"  # Используем букву T для промахов
+        self.field[d.x][d.y] = "T"
         print("Miss!")
-        return False  # Возвращаем False, если промах
+        return False
 
     def contour(self, ship):
         near = [
@@ -199,7 +199,7 @@ class Game:
 
     def show_board_options(self):
         options = []
-        for _ in range(3):  # Number of board options
+        for _ in range(3):
             board = self.random_board()
             options.append(board)
 
